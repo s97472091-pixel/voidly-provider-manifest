@@ -1,0 +1,35 @@
+{
+  "schema": "voidly.session.provider.manifest/v1",
+  "provider_did": "did:voidly:Q1CP4b5QUTVR2GmErXFd3p",
+  "signing_public_key_base64": "ukkz3K9o3MqbcrVLuGM7o6pRS1L7A2lQL9lb7agzMxk=",
+  "encryption_public_key_base64": "4lrMQsIZ3NxzymFTqNmep5v4Wh8CBtSE04beZvFXojY=",
+  "attestor_public_key_base64": "2kQTL0t8ugMfAh5f6tjCn1KYQFzyj2gM4GlxbKsLT+g=",
+  "accept_url": "https://raw.githubusercontent.com/s97472091-pixel/voidly-provider-manifest/main/.well-known/voidly-session-provider.json",
+  "hire_message_schema": "voidly-session-hire/v1",
+  "worker_base_url": "https://raw.githubusercontent.com/s97472091-pixel/voidly-provider-manifest/main/.well-known/voidly-session-provider.json",
+  "grant_ttl_ms": {
+    "min": 300000,
+    "max": 21600000
+  },
+  "acceptance_ttl_ms": 300000,
+  "services": [
+    {
+      "ref": "hermes.field-unit/echo/v1",
+      "description": "Echo service for rail testing. No live daemon is deployed for this identity yet; hires are refused until one is.",
+      "price": {
+        "chain": "eip155:8453",
+        "asset": "eip155:8453/erc20:0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "payee_account": "eip155:8453:0x0000000000000000000000000000000000000000",
+        "min_amount": "50000",
+        "max_amount": "50000"
+      }
+    }
+  ],
+  "payment_buys": "an attempt, not an outcome",
+  "notes": [
+    "Hello-rail enrollment identity created for the Voidpay launch board, not a running provider daemon.",
+    "accept_url and worker_base_url point at the published manifest because no live accept endpoint is deployed for this key.",
+    "Hires against this DID will be refused until a daemon exists."
+  ],
+  "signature_base64": "EsyvRLoNY1wQtx4Y683pQzKPkVlq/d1fT/ZIYDUuMe4Y2zfCDiXPw7/kNqxAGTvqJuwgQUOhGtFwjrW/n0XFCg=="
+}
